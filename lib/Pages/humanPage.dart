@@ -51,7 +51,7 @@ class HumanPage extends StatelessWidget {
                     onPressed: () {},
                     child: CircleAvatar(
                       backgroundColor: kthemeButtonColor,
-                      child: Text('2'),
+                      child: Text('6'),
                     ),
                   ),
                 ),
