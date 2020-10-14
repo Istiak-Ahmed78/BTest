@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:it_is_a_test/Pages/welcomePage.dart';
+import 'package:it_is_a_test/constants.dart';
 
 class HumanPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue.withOpacity(0.9),
+      backgroundColor: kThemeColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
@@ -22,13 +23,18 @@ class HumanPage extends StatelessWidget {
                 'Build your body',
                 style: TextStyle(
                   color: Colors.white,
+                  fontWeight: FontWeight.w800,
                   fontSize: 30,
                   fontFamily: 'Commissioner',
                 ),
               ),
+              SizedBox(
+                height: 4,
+              ),
               Text(
                 'The way you want it.',
                 style: TextStyle(
+                  fontSize: 16,
                   color: Colors.white,
                   fontFamily: 'Commissioner',
                 ),
@@ -44,6 +50,7 @@ class HumanPage extends StatelessWidget {
                   child: FlatButton(
                     onPressed: () {},
                     child: CircleAvatar(
+                      backgroundColor: kthemeButtonColor,
                       child: Text('1'),
                     ),
                   ),
@@ -56,7 +63,10 @@ class HumanPage extends StatelessWidget {
                   child: CircleAvatar(
                     radius: 35,
                     backgroundColor: Colors.white70,
-                    child: Icon(Icons.arrow_forward_ios),
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      color: kthemeButtonColor,
+                    ),
                   ),
                 ),
                 Padding(
@@ -64,6 +74,7 @@ class HumanPage extends StatelessWidget {
                   child: FlatButton(
                     onPressed: () {},
                     child: CircleAvatar(
+                      backgroundColor: kthemeButtonColor,
                       child: Text('3'),
                     ),
                   ),

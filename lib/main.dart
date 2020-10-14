@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:it_is_a_test/Pages/HumanPage.dart';
+import 'package:it_is_a_test/Pages/humanPage.dart';
 
 void main() {
   runApp(MyApp());
