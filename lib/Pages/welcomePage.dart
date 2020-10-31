@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:it_is_a_test/Pages/profilePage.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:it_is_a_test/constants.dart';
-import 'package:it_is_a_test/widgets.dart';
+import 'package:it_is_a_test/helpers/constans.dart';
+import 'package:it_is_a_test/helpers/widgets.dart';
 
 class WelcomePage extends StatelessWidget {
   @override

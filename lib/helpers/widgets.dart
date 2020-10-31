@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:it_is_a_test/constants.dart';
 import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
+import 'constans.dart';
 
 Container lineBox(
     {IconData leadingIcon,

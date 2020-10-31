@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:it_is_a_test/Pages/welcomePage.dart';
-import 'package:it_is_a_test/constants.dart';
+import 'package:it_is_a_test/helpers/constans.dart';
 
 class HumanPage extends StatelessWidget {
   @override
