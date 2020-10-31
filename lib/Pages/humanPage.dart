@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:it_is_a_test/Pages/welcomePage.dart';
 import 'package:it_is_a_test/helpers/constans.dart';
+import '../helpers/widgest2.dart';
 
 class HumanPage extends StatelessWidget {
   @override
@@ -10,22 +11,17 @@ class HumanPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-          Container(
-            margin: const EdgeInsets.only(top: 20),
-            child: Image.asset(
-              'images/human.png',
-              height: 240,
-            ),
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: frontHumanPhto,
           ),
           Column(
             children: <Widget>[
               Text(
                 'Build your body',
-                style: TextStyle(
-                  color: Colors.white,
+                style: humanPFontStyle.copyWith(
                   fontWeight: FontWeight.w800,
                   fontSize: 30,
-                  fontFamily: 'Commissioner',
                 ),
               ),
               SizedBox(
@@ -33,10 +29,8 @@ class HumanPage extends StatelessWidget {
               ),
               Text(
                 'The way you want it.',
-                style: TextStyle(
+                style: humanPFontStyle.copyWith(
                   fontSize: 16,
-                  color: Colors.white,
-                  fontFamily: 'Commissioner',
                 ),
               ),
             ],
@@ -47,13 +41,7 @@ class HumanPage extends StatelessWidget {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.only(left: 12.0),
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: CircleAvatar(
-                      backgroundColor: kthemeButtonColor,
-                      child: Text('6'),
-                    ),
-                  ),
+                  child: sideFlatButton('3'), //find it in widget2
                 ),
                 FlatButton(
                   onPressed: () {
@@ -65,19 +53,13 @@ class HumanPage extends StatelessWidget {
                     backgroundColor: Colors.white70,
                     child: Icon(
                       Icons.arrow_forward_ios,
-                      color: kthemeButtonColor,
+                      color: kthemeBlueColor,
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 12.0),
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: CircleAvatar(
-                      backgroundColor: kthemeButtonColor,
-                      child: Text('3'),
-                    ),
-                  ),
+                  child: sideFlatButton('6'), //find it in widget2
                 ),
               ],
             ),

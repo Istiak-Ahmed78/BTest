@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:it_is_a_test/Pages/profilePage.dart';
 import 'package:it_is_a_test/helpers/constans.dart';
+import 'package:it_is_a_test/helpers/widgest2.dart';
 import 'package:it_is_a_test/helpers/widgets.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: kWhiteC,
       body: SafeArea(
-        child: Container(
-          margin: const EdgeInsets.only(top: 12),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 12),
           child: Column(
             children: <Widget>[
               Row(
@@ -21,14 +22,11 @@ class WelcomePage extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: Colors.black.withOpacity(0.03),
                       radius: 22,
-                      child: Icon(
-                        Icons.menu,
-                        color: Colors.black.withOpacity(0.5),
-                      ),
+                      child: kBlackMenuIcon,
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
+                    padding: EdgeInsets.only(right: 8.0),
                     child: GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -53,16 +51,13 @@ class WelcomePage extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       'Hello Istiak,',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 35,
-                          fontFamily: 'Poppins'),
+                      style: kPoppinFontStyle.copyWith(
+                        color: Colors.black,
+                        fontSize: 35,
+                      ),
                     ),
-                    Text(
-                      'Good Morning',
-                      style:
-                          TextStyle(fontFamily: 'Poppins', color: Colors.grey),
-                    ),
+                    Text('Good Morning',
+                        style: kPoppinFontStyle.copyWith(color: Colors.grey)),
                   ],
                 ),
               ),
@@ -70,7 +65,7 @@ class WelcomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 20, left: 18, right: 18),
                 child: krectengulerEmtyContainer(
-                  color: kthemeButtonColor,
+                  color: kthemeBlueColor,
                   height: 132,
                   weight: double.infinity,
                   child: Stack(
@@ -85,12 +80,12 @@ class WelcomePage extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   'Your Weekly',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 22),
+                                  style:
+                                      TextStyle(color: kWhiteC, fontSize: 22),
                                 ),
                                 Text('progress🔥',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 22))
+                                    style:
+                                        TextStyle(color: kWhiteC, fontSize: 22))
                               ],
                             ),
                           ),
@@ -100,35 +95,19 @@ class WelcomePage extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Icon(
-                                    Icons.arrow_forward_ios,
-                                    color: Colors.black.withOpacity(0.35),
-                                    size: 12,
-                                  ),
-                                  Icon(
-                                    Icons.arrow_forward_ios,
-                                    color: Colors.black.withOpacity(0.35),
-                                    size: 17,
-                                  ),
-                                  Icon(
-                                    Icons.arrow_forward_ios,
-                                    size: 20,
-                                    color: Colors.black.withOpacity(0.45),
-                                  ),
+                                  kRightArrow(opacity: 0.35, size: 12.0),
+                                  kRightArrow(opacity: 0.35, size: 17.0),
+                                  kRightArrow(opacity: 0.45, size: 20.0)
                                 ],
                               ),
                               decoration: BoxDecoration(
-                                  color: Colors.white,
+                                  color: kWhiteC,
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10))),
                               height: 40,
                               width: 80,
                             ),
                           ),
-                          // CustomPaint(
-                          //   painter: ProgressBoxPaint(),
-                          //   child: Container(),
-                          // )
                         ],
                       ),
                     ],
@@ -140,19 +119,19 @@ class WelcomePage extends StatelessWidget {
                 width: double.infinity,
                 child: Text(
                   'Today\'s Workouts',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 19,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'Poppins'),
+                  style: kPoppinFontStyle.copyWith(
+                    color: Colors.black,
+                    fontSize: 19,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
                 margin: const EdgeInsets.only(top: 20, left: 20),
               ),
 
               Padding(
                 padding: const EdgeInsets.only(top: 8.0),
-                //kprocessLine is in widgets.dart
                 child: kprocessLine(
+                    //kprocessLine is in widgets.dart
                     context: context,
                     boxLeadingIcon: Icons.code,
                     iconOncircle: Icons.check,
@@ -181,7 +160,7 @@ class WelcomePage extends StatelessWidget {
                         size: 15,
                       ),
                       decoration: BoxDecoration(
-                          color: kthemeButtonColor,
+                          color: kthemeBlueColor,
                           borderRadius: BorderRadius.all(Radius.circular(10))),
                     )),
               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:it_is_a_test/helpers/constans.dart';
+import 'package:it_is_a_test/helpers/widgest2.dart';
 import 'package:it_is_a_test/helpers/widgets.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -51,111 +51,9 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      height: 130,
-                      margin: const EdgeInsets.only(top: 14),
-                      child: Stack(
-                        children: <Widget>[
-                          CircleAvatar(
-                            radius: 50,
-                            backgroundImage: AssetImage('images/ghost1.jpg'),
-                          ),
-                          Positioned(
-                            child: CircleAvatar(
-                              radius: 17,
-                              backgroundColor: Colors.white,
-                              // backgroundImage: AssetImage('images/troffy.png'),
-                              child: Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Image.asset('images/troffy.png'),
-                              ),
-                            ),
-                            top: 84,
-                            left: 30,
-                          ),
-                        ],
-                      ),
-                    ),
-                    Text(
-                      'Istiak Ahmed',
-                      style: TextStyle(
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      'Pro player',
-                      style: TextStyle(
-                          fontFamily: 'Montserrat',
-                          color: kthemeButtonColorLight),
-                    )
-                  ],
-                ),
-              ),
+              kProfileAvaterPart,
               // margin: EdgeInsets.only(top: 30),
-              Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: Container(
-                  decoration: kgrayBorderRadius,
-                  height: 90,
-                  width: double.infinity,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('110.3 lbs',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontSize: 23,
-                                  color: kthemeButtonColor)),
-                          SizedBox(
-                            height: 6,
-                          ),
-                          Text(
-                            'Weight',
-                            style: TextStyle(
-                                fontFamily: 'Montserrat',
-                                color: Colors.grey.withOpacity(0.9)),
-                          )
-                        ],
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle, color: Colors.orange),
-                        height: 10,
-                        width: 10,
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('5.3 feet',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontSize: 23,
-                                  color: kthemeButtonColor)),
-                          SizedBox(
-                            height: 6,
-                          ),
-                          Text(
-                            'Height',
-                            style: TextStyle(
-                                fontFamily: 'Montserrat',
-                                color: Colors.grey.withOpacity(0.9)),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              kLbsAndFeet,
               CaloriBox()
             ],
           ),
